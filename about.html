@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cactus Software | About Us</title>
+    <style>
+        /* [Estilos base iguales a las otras páginas] */
+
+        /* Estilos específicos para About */
+        .about-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .mission-vision {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .mission-card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .values-section {
+            background-color: var(--light);
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+        }
+
+        .values-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .target-market {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .market-card {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animated {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @media (max-width: 768px) {
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <!-- [Mismo header que las otras páginas] -->
+    </header>
+
+    <section class="about-header">
+        <h1>About Cactus Software</h1>
+        <p>Just like a cactus thrives in the Mexicali desert, we provide resilient and efficient solutions.</p>
+    </section>
+
+    <section class="mission-vision">
+        <div class="mission-card animated">
+            <img src="./images/sun.png" alt="Mission">
+            <h2>Our Mission</h2>
+            <p>At Cactus Software, we empower small and medium-sized businesses in Mexicali with accessible technology solutions, helping them thrive in the digital age.</p>
+        </div>
+        <div class="mission-card animated" style="animation-delay: 0.2s;">
+            <img src="./images/growth.png" alt="Vision">
+            <h2>Our Vision</h2>
+            <p>To be the trusted technology partner for every growing business in our region, known for creating lasting solutions that help local entrepreneurs succeed in an increasingly digital world.</p>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <h2 class="section-title">Our Values</h2>
+        <div class="values-grid">
+            <div class="value-card animated" style="animation-delay: 0.3s;">
+                <h3>Local Focus</h3>
+                <p>We're your neighbors, understanding the unique needs of Mexicali businesses.</p>
+            </div>
+            <div class="value-card animated" style="animation-delay: 0.4s;">
+                <h3>Simplicity</h3>
+                <p>We make technology accessible and easy to use for everyone.</p>
+            </div>
+            <div class="value-card animated" style="animation-delay: 0.5s;">
+                <h3>Reliability</h3>
+                <p>Like a cactus in the desert, our solutions are built to last.</p>
+            </div>
+            <div class="value-card animated" style="animation-delay: 0.6s;">
+                <h3>Growth Partnership</h3>
+                <p>Your success is our success - we grow together.</p>
+            </div>
+            <div class="value-card animated" style="animation-delay: 0.7s;">
+                <h3>Innovation with Purpose</h3>
+                <p>We bring modern solutions that make practical sense for your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="target-market">
+        <h2 class="section-title">Who We Serve</h2>
+        <div class="market-grid">
+            <div class="market-card animated" style="animation-delay: 0.8s;">
+                <h3>Retail Stores</h3>
+            </div>
+            <div class="market-card animated" style="animation-delay: 0.9s;">
+                <h3>Restaurants</h3>
+            </div>
+            <div class="market-card animated" style="animation-delay: 1s;">
+                <h3>Medical Offices</h3>
+            </div>
+            <div class="market-card animated" style="animation-delay: 1.1s;">
+                <h3>Auto Repair Shops</h3>
+            </div>
+            <div class="market-card animated" style="animation-delay: 1.2s;">
+                <h3>Manufacturers</h3>
+            </div>
+            <div class="market-card animated" style="animation-delay: 1.3s;">
+                <h3>Service Providers</h3>
+            </div>
+            <div class="market-card animated" style="animation-delay: 1.4s;">
+                <h3>Local Distributors</h3>
+            </div>
+            <div class="market-card animated" style="animation-delay: 1.5s;">
+                <h3>Family Businesses</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="ideal-client">
+        <img src="./images/remote-work.png" alt="Remote Work">
+        <div class="client-content">
+            <h2>Our Ideal Client</h2>
+            <ul>
+                <li>Wants to improve their business operations</li>
+                <li>Is ready to embrace digital solutions</li>
+                <li>Values local support and personalized service</li>
+                <li>Needs Spanish-speaking technical support</li>
+                <li>Seeks cost-effective solutions</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
