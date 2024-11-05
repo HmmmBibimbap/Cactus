@@ -56,53 +56,59 @@
             gap: 2rem;
         }
 
-        .nav-links a {
+        .nav-links > a {
             color: white;
             text-decoration: none;
-            transition: color 0.3s;
+            padding: 0.5rem 1rem;
         }
 
         /* Nuevo estilo mejorado para dropdowns */
         .dropdown {
             position: relative;
             display: inline-block;
-            padding: 0.5rem 0;
         }
 
         .dropdown > a {
-            padding: 0.5rem 0;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
         }
 
         .dropdown-content {
-            opacity: 0;
-            visibility: hidden;
+            display: none;
             position: absolute;
             background-color: white;
             min-width: 220px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
             z-index: 1;
             border-radius: 5px;
-            top: 100%;
-            left: -10px;
-            padding-top: 0.5rem;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-            margin-top: 0.5rem;
+            top: calc(100% - 5px);
+            left: 0;
         }
 
-        .dropdown::after {
+        .dropdown::before {
             content: '';
             position: absolute;
             top: 100%;
             left: 0;
             width: 100%;
             height: 20px;
+            background: transparent;
+        }
+
+        .dropdown-content::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: transparent;
         }
 
         .dropdown:hover .dropdown-content {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
+            display: block;
         }
 
         .dropdown-content a {
@@ -111,17 +117,14 @@
             text-decoration: none;
             display: block;
             margin: 0;
-            transition: all 0.2s ease;
-            white-space: nowrap;
         }
 
         .dropdown-content a:hover {
             background-color: var(--light);
             color: var(--primary);
-            padding-left: 20px;
         }
 
-        /* Resto de los estilos originales */
+        /* Resto de estilos */
         .service-header {
             background-color: var(--primary);
             color: white;
