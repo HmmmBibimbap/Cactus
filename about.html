@@ -5,131 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cactus Software | About Us</title>
     <style>
-        /* [Estilos base iguales a las otras páginas] */
-/* Estilos base */
-:root {
-    --primary: #2B7A4B;
-    --secondary: #81B29A;
-    --accent: #F2CC8F;
-    --dark: #3D405B;
-    --light: #F4F1DE;
-}
+        :root {
+            --primary: #2B7A4B;
+            --secondary: #81B29A;
+            --accent: #F2CC8F;
+            --dark: #3D405B;
+            --light: #F4F1DE;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            padding-top: 60px;
+        }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--dark);
-    padding-top: 60px;
-}
+        .navbar {
+            background-color: var(--primary);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-.navbar {
-    background-color: var(--primary);
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
-.logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-}
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 2rem;
-    transition: color 0.3s;
-}
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 5px;
-    margin-top: 0.5rem;
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-.dropdown-content a {
-    color: var(--dark);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    margin: 0;
-}
+        .dropdown-content a {
+            color: var(--dark);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin: 0;
+        }
 
-.dropdown-content a:hover {
-    background-color: var(--light);
-    color: var(--primary);
-}
+        .dropdown-content a:hover {
+            background-color: var(--light);
+            color: var(--primary);
+        }
 
-.mobile-menu-btn {
-    display: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
-    
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--primary);
-        padding: 1rem;
-    }
-    
-    .nav-links.active a {
-        margin: 0.5rem 0;
-    }
-}
-        /* Estilos específicos para About */
         .about-header {
             background-color: var(--primary);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
             margin-bottom: 2rem;
+        }
+
+        .about-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .mission-vision {
@@ -152,6 +128,11 @@ nav {
         .mission-card img {
             width: 100px;
             height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card h2 {
+            color: var(--primary);
             margin-bottom: 1rem;
         }
 
@@ -182,6 +163,11 @@ nav {
             transform: translateY(-5px);
         }
 
+        .value-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
         .target-market {
             max-width: 1200px;
             margin: 4rem auto;
@@ -197,15 +183,66 @@ nav {
 
         .market-card {
             background: var(--light);
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 10px;
             text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .market-card:hover {
+            transform: translateY(-5px);
+            background: var(--accent);
         }
 
         .section-title {
             text-align: center;
             color: var(--primary);
             margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .ideal-client {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .ideal-client img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .client-content {
+            flex: 1;
+        }
+
+        .client-content h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .client-content ul {
+            list-style: none;
+        }
+
+        .client-content ul li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .client-content ul li::before {
+            content: "🌵";
+            position: absolute;
+            left: 0;
         }
 
         @keyframes fadeIn {
@@ -217,16 +254,81 @@ nav {
             animation: fadeIn 0.8s ease-out forwards;
         }
 
+        .mobile-menu-btn {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .ideal-client {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .ideal-client img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .client-content ul li {
+                text-align: left;
+            }
+
             .mission-vision {
                 grid-template-columns: 1fr;
+            }
+
+            .about-header h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
     <header class="navbar">
-        <!-- [Mismo header que las otras páginas] -->
+        <nav>
+            <a href="index.html" class="logo">🌵 Cactus Software</a>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="#">Services ▼</a>
+                    <div class="dropdown-content">
+                        <a href="services.html#core">Core Solutions</a>
+                        <a href="services.html#growth">Growth Suite</a>
+                        <a href="services.html#smart">Smart Tools</a>
+                        <a href="services.html#care">Care Package</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">About ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#mission">Mission & Vision</a>
+                        <a href="#values">Values</a>
+                        <a href="#market">Target Market</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Plans ▼</a>
+                    <div class="dropdown-content">
+                        <a href="plans.html#seedling">Seedling Plan</a>
+                        <a href="plans.html#growing">Growing Plan</a>
+                        <a href="plans.html#blooming">Blooming Plan</a>
+                    </div>
+                </div>
+                <a href="careers.html">Careers</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="mobile-menu-btn">☰</div>
+        </nav>
     </header>
 
     <section class="about-header">
@@ -234,7 +336,7 @@ nav {
         <p>Just like a cactus thrives in the Mexicali desert, we provide resilient and efficient solutions.</p>
     </section>
 
-    <section class="mission-vision">
+    <section id="mission" class="mission-vision">
         <div class="mission-card animated">
             <img src="./images/sun.png" alt="Mission">
             <h2>Our Mission</h2>
@@ -247,7 +349,7 @@ nav {
         </div>
     </section>
 
-    <section class="values-section">
+    <section id="values" class="values-section">
         <h2 class="section-title">Our Values</h2>
         <div class="values-grid">
             <div class="value-card animated" style="animation-delay: 0.3s;">
@@ -273,7 +375,7 @@ nav {
         </div>
     </section>
 
-    <section class="target-market">
+    <section id="market" class="target-market">
         <h2 class="section-title">Who We Serve</h2>
         <div class="market-grid">
             <div class="market-card animated" style="animation-delay: 0.8s;">
