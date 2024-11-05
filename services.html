@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cactus Software | Servicios</title>
+    <style>
+        /* Estilos base igual que index.html */
+        :root {
+            --primary: #2B7A4B;
+            --secondary: #81B29A;
+            --accent: #F2CC8F;
+            --dark: #3D405B;
+            --light: #F4F1DE;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            padding-top: 60px;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: var(--primary);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--primary);
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--secondary);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        /* Estilos específicos de la página de servicios */
+        .service-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .service-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .service-card-header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .service-card-content {
+            padding: 2rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: "🌵";
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <a href="index.html" class="logo">🌵 Cactus Software</a>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="#">Servicios ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#core">Core Solutions</a>
+                        <a href="#growth">Growth Suite</a>
+                        <a href="#smart">Smart Tools</a>
+                        <a href="#care">Care Package</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Nosotros ▼</a>
+                    <div class="dropdown-content">
+                        <a href="about.html#mission">Misión y Visión</a>
+                        <a href="about.html#values">Valores</a>
+                        <a href="about.html#team">Equipo</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Planes ▼</a>
+                    <div class="dropdown-content">
+                        <a href="plans.html#seedling">Seedling Plan</a>
+                        <a href="plans.html#growing">Growing Plan</a>
+                        <a href="plans.html#blooming">Blooming Plan</a>
+                    </div>
+                </div>
+                <a href="careers.html">Carreras</a>
+                <a href="#contact">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="service-header">
+        <h1>Nuestros Servicios</h1>
+        <p>Soluciones tecnológicas adaptadas a tu negocio</p>
+    </div>
+
+    <section class="service-section" id="core">
+        <div class="service-card">
+            <div class="service-card-header">
+                <h2>Business Management Tools "Core Solutions"</h2>
+            </div>
+            <div class="service-card-content">
+                <h3>Inventory Control System</h3>
+                <ul class="feature-list">
+                    <li>Never run out of stock or overstock again</li>
+                    <li>Scan products with your phone's camera</li>
+                    <li>Get notifications when items are running low</li>
+                    <li>Track product locations and movements</li>
+                    <li>Generate purchase orders automatically</li>
+                </ul>
+
+                <h3>Point of Sale (POS) System</h3>
+                <ul class="feature-list">
+                    <li>Accept all payment methods</li>
+                    <li>Print or email receipts</li>
+                    <li>Manage multiple cash registers</li>
+                    <li>Track sales by employee</li>
+                </ul>
+
+                <h3>Payroll Management</h3>
+                <ul class="feature-list">
+                    <li>Calculate salaries and deductions automatically</li>
+                    <li>Generate pay stubs and tax forms</li>
+                    <li>Track vacation days and sick leave</li>
+                    <li>Comply with Mexican labor laws</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-section" id="growth">
+        <div class="service-card">
+            <div class="service-card-header">
+                <h2>Digital Presence "Growth Suite"</h2>
+            </div>
+            <div class="service-card-content">
+                <h3>Website Development</h3>
+                <ul class="feature-list">
+                    <li>Professional websites that work on all devices</li>
+                    <li>Online catalogs of your products</li>
+                    <li>Contact forms and maps</li>
+                    <li>Social media integration</li>
+                </ul>
+
+                <h3>Mobile Apps</h3>
+                <ul class="feature-list">
+                    <li>Custom app with your business brand</li>
+                    <li>Let customers order directly</li>
+                    <li>Send special offers through notifications</li>
+                    <li>Schedule appointments</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-section" id="smart">
+        <div class="service-card">
+            <div class="service-card-header">
+                <h2>Business Intelligence "Smart Tools"</h2>
+            </div>
+            <div class="service-card-content">
+                <h3>Sales Analytics</h3>
+                <ul class="feature-list">
+                    <li>See your best-selling items</li>
+                    <li>Track daily, weekly, monthly performance</li>
+                    <li>Compare periods</li>
+                    <li>Forecast future sales</li>
+                </ul>
+
+                <h3>Customer Insights</h3>
+                <ul class="feature-list">
+                    <li>Know your regular customers</li>
+                    <li>Track purchasing history</li>
+                    <li>Collect and manage reviews</li>
+                    <li>Understand shopping patterns</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-section" id="care">
+        <div class="service-card">
+            <div class="service-card-header">
+                <h2>Support Services "Care Package"</h2>
+            </div>
+            <div class="service-card-content">
+                <h3>Local Technical Support</h3>
+                <ul class="feature-list">
+                    <li>Visit your business when needed</li>
+                    <li>Phone and WhatsApp support</li>
+                    <li>Remote problem-solving</li>
+                    <li>Weekend support available</li>
+                </ul>
+
+                <h3>Training Programs</h3>
+                <ul class="feature-list">
+                    <li>Initial system training</li>
+                    <li>Ongoing education</li>
+                    <li>New feature workshops</li>
+                    <li>Employee onboarding help</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
