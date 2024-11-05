@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cactus Software | Home</title>
     <style>
-        /* [Estilos previos sin cambios hasta .navbar] */
         :root {
             --primary: #2B7A4B;
             --secondary: #81B29A;
@@ -63,7 +62,6 @@
             padding: 0.5rem 1rem;
         }
 
-        /* Nuevo estilo mejorado para dropdowns */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -125,31 +123,70 @@
             color: var(--primary);
         }
 
-        /* [Resto de los estilos sin cambios hasta media queries] */
         .hero {
             background: linear-gradient(rgba(43, 122, 75, 0.9), rgba(43, 122, 75, 0.9)), url('/api/placeholder/1200/600');
             color: white;
             padding: 8rem 2rem 4rem;
             text-align: center;
-            min-height: 80vh;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease-out;
         }
 
-        .hero p {
-            font-size: 1.4rem;
-            max-width: 800px;
-            margin: 0 auto;
-            animation: fadeInUp 1s ease-out 0.3s;
+        .slogan {
+            margin: 2rem 0;
+            animation: fadeInUp 1s ease-out 0.2s;
             opacity: 0;
             animation-fill-mode: forwards;
+        }
+
+        .slogan h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .company-description {
+            max-width: 800px;
+            margin: 2rem auto;
+            animation: fadeInUp 1s ease-out 0.4s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        .company-description p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-points {
+            list-style: none;
+            margin: 1.5rem 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hero-points li {
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .hero-points li:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .cta-button {
@@ -201,6 +238,11 @@
             margin-bottom: 1rem;
         }
 
+        .icon-item h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
         .mobile-menu-btn {
             display: none;
             color: white;
@@ -209,7 +251,17 @@
             padding: 0.5rem;
         }
 
-        /* Estilos mejorados para móvil */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -260,11 +312,16 @@
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
-            .hero p {
-                font-size: 1.1rem;
+            .slogan h2 {
+                font-size: 1.8rem;
+            }
+
+            .company-description p,
+            .hero-points li {
+                font-size: 1rem;
             }
 
             .nav-links > a {
@@ -272,11 +329,18 @@
                 width: 100%;
                 text-align: left;
             }
+
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+
+            .icon-section {
+                padding: 2rem 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- [Header y resto del HTML sin cambios] -->
     <header class="navbar">
         <nav>
             <a href="index.html" class="logo">🌵 Cactus Software</a>
@@ -313,10 +377,20 @@
         </nav>
     </header>
 
-    <!-- [Resto de las secciones sin cambios] -->
     <section class="hero">
-        <h1>Built to last, made to grow</h1>
-        <p>Just like a cactus thrives in the Mexicali desert, we provide resilient and efficient solutions for your business.</p>
+        <h1>Cactus Software</h1>
+        <div class="slogan">
+            <h2>Built to last, made to grow</h2>
+            <p>Just like a cactus thrives in the Mexicali desert, we provide resilient and efficient solutions.</p>
+        </div>
+        <div class="company-description">
+            <p>The cactus represents strength, longevity, and smart resource management.</p>
+            <ul class="hero-points">
+                <li>We create enduring solutions that adapt and scale with your business</li>
+                <li>Like a cactus, our software is both resilient and growth-oriented</li>
+                <li>We build lasting tools that help you grow</li>
+            </ul>
+        </div>
         <a href="services.html" class="cta-button">Discover Our Solutions</a>
     </section>
 
@@ -340,7 +414,6 @@
         </div>
     </section>
 
-    <!-- Agregar JavaScript para el menú móvil -->
     <script>
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
