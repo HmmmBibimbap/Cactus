@@ -62,7 +62,6 @@
             padding: 0.5rem 1rem;
         }
 
-        /* Nuevo estilo mejorado para dropdowns */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -124,7 +123,6 @@
             color: var(--primary);
         }
 
-        /* Resto de estilos */
         .service-header {
             background-color: var(--primary);
             color: white;
@@ -214,6 +212,7 @@
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
+            padding: 0.5rem;
         }
 
         @media (max-width: 768px) {
@@ -233,14 +232,80 @@
 
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary);
+                padding: 1rem;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .dropdown {
+                width: 100%;
+            }
+
+            .dropdown > a {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .dropdown-content {
+                position: static;
+                background-color: var(--secondary);
+                width: 100%;
+                margin-top: 0;
+                box-shadow: none;
+                padding-left: 1rem;
+            }
+
+            .dropdown-content a {
+                color: white;
+                padding: 0.8rem 1rem;
+            }
+
+            .dropdown-content a:hover {
+                background-color: var(--primary);
+                color: white;
             }
 
             .service-header h1 {
                 font-size: 2rem;
             }
 
+            .nav-links > a {
+                padding: 1rem;
+                width: 100%;
+                text-align: left;
+            }
+
             .mobile-menu-btn {
-                display: block;
+                margin-left: 1rem;
+            }
+
+            .service-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .service-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .service-section {
+                padding: 1rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -278,7 +343,7 @@
                 <a href="careers.html">Careers</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div class="mobile-menu-btn">☰</div>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
         </nav>
     </header>
 
@@ -288,6 +353,7 @@
     </section>
 
     <section class="service-section">
+        <!-- [Resto de las tarjetas de servicio igual] -->
         <div class="service-card" id="core">
             <img src="./images/inventory.PNG" alt="Inventory Control" class="service-icon">
             <div class="service-content">
@@ -400,5 +466,12 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
