@@ -3,33 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Cactus Software | Built to last, made to grow</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        :root {
+            --primary: #2B7A4B;
+            --secondary: #81B29A;
+            --accent: #F2CC8F;
+            --dark: #3D405B;
+            --light: #F4F1DE;
+        }
+        
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .contenedor {
-            max-width: 800px;
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        .navbar {
+            background-color: var(--primary);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar nav {
+            max-width: 1200px;
             margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        h1 {
-            color: #333;
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(43, 122, 75, 0.9), rgba(43, 122, 75, 0.9)), url('/api/placeholder/1200/600');
+            color: white;
+            padding: 8rem 2rem 4rem;
             text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .values {
+            background-color: var(--light);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .services {
+            background-color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 2rem 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="contenedor">
-        <h1>Bienvenidos a Mi Página</h1>
-        <p>Este es el contenido de mi página web.</p>
-        <!-- Aquí puedes añadir más contenido -->
-    </div>
+    <header class="navbar">
+        <nav>
+            <a href="#" class="logo">🌵 Cactus Software</a>
+            <div class="nav-links">
+                <a href="#about">Nosotros</a>
+                <a href="#services">Servicios</a>
+                <a href="#values">Valores</a>
+                <a href="#contact">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Built to last, made to grow</h1>
+        <p>Just like a cactus thrives in the Mexicali desert, we provide resilient and efficient solutions for your business.</p>
+    </section>
+
+    <section class="section" id="about">
+        <div class="mission-vision">
+            <div class="card">
+                <h2>Misión</h2>
+                <p>At Cactus Software, we empower small and medium-sized businesses in Mexicali with accessible technology solutions, helping them thrive in the digital age.</p>
+            </div>
+            <div class="card">
+                <h2>Visión</h2>
+                <p>To be the trusted technology partner for every growing business in our region, known for creating lasting solutions that help local entrepreneurs succeed in an increasingly digital world.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section values" id="values">
+        <h2 class="section-title">Nuestros Valores</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Local Focus</h3>
+                <p>We're your neighbors, understanding the unique needs of Mexicali businesses.</p>
+            </div>
+            <div class="value-card">
+                <h3>Simplicity</h3>
+                <p>We make technology accessible and easy to use for everyone.</p>
+            </div>
+            <div class="value-card">
+                <h3>Reliability</h3>
+                <p>Like a cactus in the desert, our solutions are built to last.</p>
+            </div>
+            <div class="value-card">
+                <h3>Growth Partnership</h3>
+                <p>Your success is our success - we grow together.</p>
+            </div>
+            <div class="value-card">
+                <h3>Innovation with Purpose</h3>
+                <p>We bring modern solutions that make practical sense for your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section services" id="services">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Business Management Tools</h3>
+                <p>Core Solutions for daily operations including Inventory Control, POS System, and Payroll Management.</p>
+            </div>
+            <div class="service-card">
+                <h3>Digital Presence</h3>
+                <p>Growth Suite including Website Development, Mobile Apps, and Digital Marketing solutions.</p>
+            </div>
+            <div class="service-card">
+                <h3>Business Intelligence</h3>
+                <p>Smart Tools for Sales Analytics and Customer Insights to help you make data-driven decisions.</p>
+            </div>
+            <div class="service-card">
+                <h3>Support Services</h3>
+                <p>Comprehensive Care Package with local technical support and training programs in Spanish.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer cl
+        ass="footer" id="contact">
+        <p>© 2024 Cactus Software | Mexicali, Mexico</p>
+        <p>Built to last, made to grow</p>
+    </footer>
 </body>
 </html>
